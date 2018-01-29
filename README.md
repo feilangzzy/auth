@@ -1,2 +1,2 @@
 # auth
-spring+mybatis scaffold
+springBoot+mybatis scaffold

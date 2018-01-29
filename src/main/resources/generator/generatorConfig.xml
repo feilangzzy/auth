@@ -7,6 +7,8 @@
     <properties resource="application-dev.properties"/>
 
     <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
         <commentGenerator>
             <property name="suppressDate" value="true"/>
             <property name="suppressAllComments" value="true"/>
@@ -38,7 +40,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!--生成对应表及类名-->
-        <table tableName="role_menu" domainObjectName="RoleMenu" enableCountByExample="false" enableUpdateByExample="false"
+        <table tableName="menu" domainObjectName="Menu" enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
             <generatedKey column="id" sqlStatement="Mysql"/>
         </table>

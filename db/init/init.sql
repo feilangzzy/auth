@@ -41,8 +41,9 @@ DROP TABLE IF EXISTS `menu`;
 CREATE TABLE `menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `menu_name` varchar(50) NOT NULL,
-  `menu_url` varchar(50) NOT NULL,
-  `permission` varchar(50) NOT NULL,
+  `menu_type`enum('menu','auth','button') NOT NULL,
+  `menu_url` varchar(50) DEFAULT '',
+  `permission` varchar(50)  DEFAULT '',
   `parent_id` varchar(32) NOT NULL,
   `parent_ids` varchar(255) DEFAULT NULL,
   `sort` int(11) NOT NULL DEFAULT '0' COMMENT '分级菜单,默认0为一级菜单',

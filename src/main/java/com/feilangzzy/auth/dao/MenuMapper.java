@@ -1,8 +1,6 @@
 package com.feilangzzy.auth.dao;
 
-
 import com.feilangzzy.auth.entity.Menu;
-
 import java.util.List;
 
 public interface MenuMapper {
@@ -10,11 +8,9 @@ public interface MenuMapper {
 
     int insert(Menu record);
 
-    int insertSelective(Menu record);
-
     Menu selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(Menu record);
+    List<Menu> selectAll();
 
     int updateByPrimaryKey(Menu record);
 

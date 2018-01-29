@@ -7,6 +7,8 @@ public class Menu {
 
     private String menuName;
 
+    private String menuType;
+
     private String menuUrl;
 
     private String permission;
@@ -35,6 +37,14 @@ public class Menu {
 
     public void setMenuName(String menuName) {
         this.menuName = menuName == null ? null : menuName.trim();
+    }
+
+    public String getMenuType() {
+        return menuType;
+    }
+
+    public void setMenuType(String menuType) {
+        this.menuType = menuType == null ? null : menuType.trim();
     }
 
     public String getMenuUrl() {
